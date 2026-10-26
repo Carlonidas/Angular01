@@ -4,9 +4,10 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CasdastroComponent } from './casdastro-component/casdastro-component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CadastroCli } from './cadastro-cli/cadastro-cli';
 
 @NgModule({
-  declarations: [App, CasdastroComponent],
+  declarations: [App, CasdastroComponent, CadastroCli],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
