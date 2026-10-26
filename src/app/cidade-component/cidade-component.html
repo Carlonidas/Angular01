@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="display-4 text-center">Cadastro de Cidade</div>
+
+  <form [formGroup]="formGroupCidade">
+    <div class="mb-3">
+      <label for="inputNome" class="form-label">Nome</label>
+      <input formControlName="nome" type="text" class="form-control" id="inputNome">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputUf" class="form-label">UF</label>
+      <input formControlName="uf" type="text" class="form-control" id="inputUf">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputPopulacao" class="form-label">População</label>
+      <input formControlName="populacao" type="text" class="form-control" id="inputPopulacao">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputRegiao" class="form-label">Região</label>
+      <input formControlName="regiao" type="text" class="form-control" id="inputRegiao">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+  </form>
+</div>
+
+<br>
+
+<div class="container">
+  Total de cidades: {{cidades.length}}
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let c of cidades">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{c.nome}} - {{c.uf}}</h5>
+          <p class="card-text">Região: {{c.regiao}}</p>
+          <p class="card-text">População: {{c.populacao}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
